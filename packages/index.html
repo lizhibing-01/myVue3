@@ -9,12 +9,14 @@
 <body>
     <script src="./reactive/dist/reactive.global.js"></script>
     <script>
-        let {reactive} = VueReactivity;
-        let jj = {name:'zhangsan',age:23,adress:{one:"haidian"}}
-        let arr = [1,2,3,4]
-       let reactiveO = reactive(arr)
-       reactiveO.push("rrr")
-        console.log(reactiveO)
+        let {reactive,effect} = VueReactivity;
+    //     let jj = {name:'zhangsan',age:23,adress:{one:"haidian"}}
+    //     let arr = [1,2,3,4]
+    //    let reactiveO = reactive(arr)
+    //    reactiveO.push("rrr")
+    //     console.log(reactiveO)
+  let r =  effect(()=>{})
+  r()
     </script>
 </body>
 </html>

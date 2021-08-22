@@ -56,6 +56,22 @@ var VueReactivity = (function (exports) {
         return proxy;
     }
 
+    function effect(fn, options) {
+        if (options === void 0) { options = {}; }
+        var effect = createReactiveEffect();
+        if (!options.lazy) {
+            effect();
+        }
+        return effect;
+    }
+    function createReactiveEffect(fn, options) {
+        var effect = function reactiveEffect() {
+            console.log("effect");
+        };
+        return effect;
+    }
+
+    exports.effect = effect;
     exports.reactive = reactive;
 
     Object.defineProperty(exports, '__esModule', { value: true });
